@@ -33,32 +33,7 @@ public class CustomerView {
                     keepGoing = false;
                 }
 
-                else if(userResponse == "1") {
-                    System.out.println("Please enter in the SKU of the item you would like to add to your cart. Type 0 if you want to quit: \n");
-                    itemSKU = readObj.nextLine();
-                    if(itemSKU != "0") {
-                        System.out.println("How many would you like to add?");
-                        String num = readObj.nextLine();
-                        stub.addItem(itemSKU, num);
-                    }
-                }
-
-                else if(userResponse == "2") {
-                    System.out.println("Please type in the name of the item you would like to lookup, or '0' to cancel: \n");
-                    itemName = readObj.nextLine();
-
-                    if(userResponse != "0") {
-                        stub.itemLookup(itemName);
-                    }
-                }
-
-                else if(userResponse == "3") {
-                    stub.viewCart();
-                }
-
-                else if(userResponse == "4") {
-                    stub.checkout();
-                }
+                readObj.close();
             }
 
         } catch(Exception e) {
