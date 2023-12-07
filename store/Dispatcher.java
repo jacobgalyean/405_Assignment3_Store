@@ -1,4 +1,4 @@
-package server;
+package store;
 
 public class Dispatcher {
     

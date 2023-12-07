@@ -1,24 +1,16 @@
-package server;
+package store;
 
 import java.io.File;
-import java.io.FileWriter;
-import java.rmi.Remote;
-import java.rmi.RemoteException;
-import java.rmi.server.UnicastRemoteObject;
 import java.util.Scanner;
 
-import common.CustomerCmds;
+public class Add_Item_Cart_Cmd implements Customer_Cmd{
+    
+    public void execute() {
+        Scanner readObj = new Scanner(System.in);
 
-public class CustomerCmdsRemote extends UnicastRemoteObject implements CustomerCmds {
+        System.out.println("Please enter the item you would like to add to your cart: ");
+        String itemName = readObj.nextLine();
 
-    static public Cart cart = new Cart();
-
-    protected CustomerCmdsRemote() throws RemoteException {
-        super();
-
-    }
-
-    public boolean addItem(String itemName, String num) {
         try {
             String name;
             String description;
@@ -35,8 +27,7 @@ public class CustomerCmdsRemote extends UnicastRemoteObject implements CustomerC
                 price = readItem.next();
 
                 if(name == itemName) {
-                    cart.cartAddItem(itemName, quantity, price);
-                    return true;
+                
                 }
             }
             readItem.close();
@@ -45,19 +36,5 @@ public class CustomerCmdsRemote extends UnicastRemoteObject implements CustomerC
             System.out.println("Server err :" + e.getMessage());
             e.printStackTrace();
         }
-        return false;
     }
-
-    public void viewCart() {
-        cart.cartDisplayAll();
-    }
-
-    public boolean checkout() {
-        return true;
-    }
-
-    public void itemLookup(String itemName) {
-        
-    }
-
 }

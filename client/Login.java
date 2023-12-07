@@ -8,8 +8,8 @@ import java.rmi.RemoteException;
 import java.util.Scanner;
 
 import common.FrontController;
-import server.AdminView;
-import server.CustomerView;
+import store.AdminView;
+import store.CustomerView;
 
 public class Login {
 

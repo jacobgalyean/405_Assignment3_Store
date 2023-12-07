@@ -1,4 +1,4 @@
-package server;
+package store;
 
 import java.io.File;
 import java.rmi.Naming;
