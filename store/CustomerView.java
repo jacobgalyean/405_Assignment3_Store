@@ -7,8 +7,6 @@ import java.io.File;
 import java.rmi.Naming;
 import java.util.Scanner;
 
-import common.CustomerCmds;
-
 public class CustomerView {
 
     Customer_Cmd_Factory factory = new Customer_Cmd_Factory();

@@ -1,5 +1,7 @@
 package store;
 
+//a factory to create customer commands
+
 public class Customer_Cmd_Factory {
 
     public Customer_Cmd cmd_Checkout() {
