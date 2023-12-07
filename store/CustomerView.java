@@ -63,7 +63,7 @@ public class CustomerView {
                 }
 
                 else if(userResponse == "2") {
-                    factory.cmd_Item_Lookup();
+                    factory.cmd_Item_Lookup().execute();
                 }
 
                 else if(userResponse == "3") {
@@ -79,7 +79,7 @@ public class CustomerView {
                 }
 
                 else if(userResponse == "5") {
-                    factory.cmd_Checkout();
+                    factory.cmd_Checkout().execute();
                 }
                 readObj.close();
             }

@@ -1,1 +1,1 @@
-customer1, 0000, 1
+customer1, 0000, customer
