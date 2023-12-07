@@ -16,6 +16,7 @@ public class FrontControllerRemote extends UnicastRemoteObject implements FrontC
         super();
     }
 
+    //check to make sure the user's information is correct.
     private boolean isAuthenticUser(String username, String password, String type) {
          try {
             String acctName;

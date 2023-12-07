@@ -1,3 +1,7 @@
 The purpose of this project is to show what a store might look like if it were made using Java RMI.
 It implements the Command pattern by seperating the commands of the admin and some of the commands of the customer into seperate objects.
 It also used the abstract factory in order to create and return those commands when requested.
+
+When it comes to running the program, the customer side of things should work properly. Admin, is unfortunately, left as just a skeleton.
+
+Inside the server folder, an account.txt file there is already a customer account waiting to be tested with!
