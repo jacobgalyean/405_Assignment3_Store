@@ -2,6 +2,8 @@ package store;
 
 import java.util.ArrayList;
 
+//A file containing all of the commands that are to be used for a customer's cart.
+
 public class Cart_Cmds {
     ArrayList<String> contents = new ArrayList<String>();
     int totalPrice = 0;
@@ -25,7 +27,7 @@ public class Cart_Cmds {
 
     public void cartDisplayAll() {
         for(int i = 0; i < contents.size(); i++) {
-            System.out.println(contents.get(i) + "\n");
+            System.out.println(i + " " + contents.get(i) + "\n");
         }
     }
 }

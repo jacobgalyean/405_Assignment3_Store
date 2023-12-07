@@ -27,7 +27,7 @@ public class CustomerView {
                 Scanner readObj = new Scanner(System.in);
 
                 System.out.println("Successfully connected. \n Please type the number associated with what you'd like to do: \n");
-                System.out.println("0.) Quit \n 1.) Add Item to Cart \n 2.) Lookup Item \n 3.) View Cart \n 4.) Checkout");
+                System.out.println("0.) Quit \n 1.) Add Item to Cart \n 2.) Lookup Item \n 3.) View Cart \n 4.) Remove Item From Cart \n 5.) Checkout");
 
                 userResponse = readObj.nextLine();
 
@@ -58,10 +58,32 @@ public class CustomerView {
                             quantity = readObj.nextLine();
 
                             cart.cartAddItem(itemName, quantity, price);
+                            break;
                         }
                     }
                     readItem.close();
-                } 
+                }
+
+                else if(userResponse == "2") {
+                    factory.cmd_Item_Lookup();
+                }
+
+                else if(userResponse == "3") {
+                    cart.cartDisplayAll();
+                }
+
+                else if(userResponse == "4") {
+                    cart.cartDisplayAll();
+                    System.out.println("Please type what number is associated with the item you'd like to drop: \n");
+                    int index = Integer.parseInt(readObj.nextLine());
+
+                    cart.cartRmvItem(index);
+                }
+
+                else if(userResponse == "5") {
+                    factory.cmd_Checkout();
+                }
+                readObj.close();
             }
         }catch(Exception e) {
             System.out.println("Server err :" + e.getMessage());
